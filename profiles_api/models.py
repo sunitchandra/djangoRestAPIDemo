@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.models import BaseUserManager
 
+####Credentials super user: Sunit, sunit.vforce@gmail.com, abc123
 
 # Create your models here.
 class UserProfileManager(BaseUserManager):
@@ -21,7 +22,7 @@ class UserProfileManager(BaseUserManager):
 
             return user
     
-    def super_user(self, email, name, password):
+    def create_superuser(self, email, name, password):
          """New super with given details"""
          user = self.create_user(email, name, password)
          
